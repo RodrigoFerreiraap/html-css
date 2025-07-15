@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/pequena1.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/media1.png" type="image/png">
+        <img src="imagens/grande1.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <!--Maneira 1 de colocar áudio:-->
+    <audio src="midia/rufus.mp3" controls></audio> <!--MP3 WAV OGG-->
+    <!--Maneira 2 de colocar áudio-->
+    <audio preload="metadata" controls loop> <!--loop pra musica repetir--> <!--controls pra adicionar play-->
+        <source src="midia/rufus.mp3" type="audio/mpeg">
+        <source src="midia/rufus.ogg" type="audio/ogg"> <!--exemplo com arquivo ogg-->
+        <source src="midia/rufus.wav" type="audio/wav"> <!--exemplo com arquivo wav-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/rufus.mp3">Clique aqui para baixar o arquivo</a></p>
+    </audio>
+</body>
+</html>

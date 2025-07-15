@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <!--forma 1 de fazer: <video src="midia/videoo1.mp4" width="500" controls></video> -->
+    <video width="560" poster="imagens/exercvid.jpg" controls loop> <!--poster pra capa--> <!-- autoplay não funcionou.-->
+        <source src="midia/video11.mp4" type="video/mp4">
+        <source src="midia/videoo1.ogv" type="video/ogg">
+        <source src="midia/videoo1.webm" type="video/webm">
+        <source src="midia/videoo1.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com reeprodução de vídeos.</p>
+    </video> <!--Nesse modo consume muito serviço de hospedagem - NÃO RECOMENDADO-->
+
+    <h1>Inserindo vídeos do Youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jPWsBuiy1rE?si=i-JcNxqJ3LXROF85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <h1>Inserindo vídeo do Vimeo</h1>
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/330207644?h=6a9e658aaf" width="560" height="315" frameborder="0"    allowfullscreen></iframe>
+</body>
+</html>
