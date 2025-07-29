@@ -2,6 +2,90 @@
 
 /* Todas as demais mídias */
 
-@media print {
+/* Typical Device Breakpoints
+
+Até 480px – Mobile pequeno (modo retrato)
+481px a 767px – Mobile médio e grande
+
+768px a 991px – Tablet (modo retrato)
+992px a 1199px – Tablet (modo paisagem) e laptops pequenos
+
+1200px a 1439px – Laptop e desktop médio
+1440px ou mais – Desktop grande / telas 4K
+*/
+
+@media print { /*IMPRESSORA*/
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-image: url(../imagens/back-print.jpg); /*desnecessário*/
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/*@media screen and (max-width: 480px){
     
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+    
+}
+Outro jeito de fazer essa configuração que ja foi feita no style.css
+
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {/* TABLET */
+   body {
+    background-image: url(../imagens/back-tablet.jpg);
+   }
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1439px)  {/* DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 1440px) { /* TELAS GRANDES */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main {
+        width: 700px;
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
 }
