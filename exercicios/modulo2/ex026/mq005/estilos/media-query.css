@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints
+
+Até 480px – Mobile pequeno (modo retrato)
+481px a 767px – Mobile médio e grande
+
+768px a 991px – Tablet (modo retrato)
+992px a 1199px – Tablet (modo paisagem) e laptops pequenos
+
+1200px a 1439px – Laptop e desktop médio
+1440px ou mais – Desktop grande / telas 4K
+*/
+
+@media screen and (min-width: 768px){
+    span#icon {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+    }
+    main {
+        width: 768px;
+    }
+}
